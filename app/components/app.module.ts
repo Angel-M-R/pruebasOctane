@@ -1,37 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { routing, appRoutingProviders } from './app.routing';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideojuegoComponent } from './videojuego/videojuego.component';
-import { ZapatillasComponent } from './zapatillas/zapatillas.component';
-import { CursosComponent } from './cursos/cursos.component';
-import { HomeComponent } from './home/home.component';
-import { ExternoComponent } from './externo/externo.component';
-import { HttpClientModule } from  '@angular/common/http';
-import { CalculadoraPipe } from './pipes/calculadora.pipe';
-import { ContactoComponent } from './contacto/contacto.component';
+import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideojuegoComponent,
-    ZapatillasComponent,
-    CursosComponent,
-    HomeComponent,
-    ExternoComponent,
-    CalculadoraPipe,
-    ContactoComponent
+    AboutComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    routing,
-    HttpClientModule
+    AppRoutingModule
   ],
-  providers: [
-    appRoutingProviders
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
